@@ -1,0 +1,39 @@
+// @import "../style/fonts.scss"
+
+
+@mixin horizontal-center {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+.classino-title {
+    @include horizontal-center();
+    margin-top: 3%;
+    img {
+        width: 20%;
+        height: auto;
+    }
+}
+.classino-description {
+    @include horizontal-center();
+    direction: rtl;
+    font-size: 20px;
+}
+.students-picture {
+    @include horizontal-center();
+    img {
+        width: 50%;
+        height: auto;
+    }
+}
+.classino-subtitle-1 {
+    @include horizontal-center();
+    h2 {
+        margin-top: 5%;
+    }
+}

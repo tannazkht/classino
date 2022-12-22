@@ -1,0 +1,39 @@
+body {
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
+}
+
+.classino-title {
+  display: flex;
+  justify-content: center;
+  margin-top: 3%;
+}
+.classino-title img {
+  width: 20%;
+  height: auto;
+}
+
+.classino-description {
+  display: flex;
+  justify-content: center;
+  direction: rtl;
+  font-size: 20px;
+}
+
+.students-picture {
+  display: flex;
+  justify-content: center;
+}
+.students-picture img {
+  width: 50%;
+  height: auto;
+}
+
+.classino-subtitle-1 {
+  display: flex;
+  justify-content: center;
+}
+.classino-subtitle-1 h2 {
+  margin-top: 5%;
+}/*# sourceMappingURL=classino.css.map */
