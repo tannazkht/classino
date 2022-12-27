@@ -1,22 +1,49 @@
-// @import "../style/fonts.scss"
+// @import "fonts.scss";
+// @font-face {
+//     font-family: IranSans;
+//     src: url(../assets/Iran-Sans.ttf) format('ttf');
+// }
 
+$reasons-font-size: 20px;
+$Light: #ffffff;
+$Dark: #000000;
 
 @mixin horizontal-center {
     display: flex;
     justify-content: center;
 }
-
+* {
+    box-sizing: border-box;
+    font-family: IranSans;
+}
 body {
     width: 100%;
     margin: 0%;
-    padding: 0%;
+    padding: 0%;    
+    background-image: linear-gradient(180deg, #FFE9BD 0%, #FFFFFF 79%);
+}
+.second-section {
+    background-image: radial-gradient(circle at 80% 84%, #FFFFFF 0%, #4492FC 196%);
+    border: 1px solid #979797;
 }
 .classino-title {
     @include horizontal-center();
+    flex-direction: column;
+    align-items: center;
     margin-top: 3%;
     img {
-        width: 20%;
+        width: 15%;
         height: auto;
+    }
+    .blue-line {
+        width: 23%;
+        border: 1px solid #036AF5;
+        border-radius: 30px;
+    }
+    p {
+        color: #036AF5;
+        font-size: 25px;
+        font-weight: bolder;
     }
 }
 .classino-description {
@@ -31,9 +58,75 @@ body {
         height: auto;
     }
 }
-.classino-subtitle-1 {
+.why-classino-main {
+    position: relative;
+    top: 120px;
+}
+.classino-subtitle-1, .classino-subtitle-2 {
     @include horizontal-center();
-    h2 {
-        margin-top: 5%;
+}
+.why-classino {
+    @include horizontal-center();
+    .reasons {  
+        font-size: $reasons-font-size; 
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        height: 200px;
+        margin: 1.5%;
+        background-image: linear-gradient(225deg, #C5DEFF 0%, #9BC5FF 19%, #68A9FF 39%, #036AF5 100%);
+        border: 3px solid rgba(54,140,255,0.61);
+        box-shadow: 4px 4px 14px 0 rgba(0,0,0,0.09);
+        border-radius: 16px;
+        p {
+            color: $Light;
+            text-align: center;
+            padding: 3%;
+        }
     }
+}
+.classino-subtitle-2 {
+    position: relative;
+    left: 5%;
+    top: 23px;
+    margin-top: 9%;
+    img {
+        width: 10%;
+        height: auto;
+        position: relative;
+        left: 13%;
+        top: 35px;
+    }
+}
+.classino-technology {
+    margin: auto;
+    @include horizontal-center();
+    align-items: center;
+    width: 65%;
+    height: 300px;
+    background-image: linear-gradient(225deg, #C5DEFF 0%, #9BC5FF 19%, #68A9FF 39%, #036AF5 100%);
+    border: 4px solid rgba(54,140,255,0.61);
+    box-shadow: 4px 4px 14px 0 rgba(0,0,0,0.09);
+    border-radius: 16px;
+    img {
+        width: 180px;
+        height: 180px;
+        position: relative;
+        right: 12%;
+    }
+    .text {
+        position: relative;
+        right: 8%;
+        width: 48%;
+        p {
+            color: $Light;
+            font-size: 20px;
+            direction: rtl;
+        }
+    }   
+}
+.tandis-main {
+    
 }

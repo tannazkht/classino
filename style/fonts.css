@@ -1,1 +1,4 @@
-/*# sourceMappingURL=fonts.css.map */
+@font-face {
+  font-family: IranSans;
+  src: url(../assets/fonts/iransans/ttf/IRANSansWeb.ttf) format(".ttf");
+}/*# sourceMappingURL=fonts.css.map */
