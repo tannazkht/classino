@@ -1,16 +1,24 @@
-// @import "fonts.scss";
-// @font-face {
-//     font-family: IranSans;
-//     src: url(../assets/Iran-Sans.ttf) format('ttf');
-// }
+@import "fonts.scss";
 
-$reasons-font-size: 20px;
+$reasons-font-size: 17px;
 $Light: #ffffff;
 $Dark: #000000;
 
-@mixin horizontal-center {
+
+@mixin center {
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+@mixin horizontal-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+@mixin vertical-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 * {
     box-sizing: border-box;
@@ -27,53 +35,60 @@ body {
     border: 1px solid #979797;
 }
 .classino-title {
-    @include horizontal-center();
-    flex-direction: column;
-    align-items: center;
+    @include vertical-center();
     margin-top: 3%;
     img {
         width: 15%;
         height: auto;
+        margin-bottom: 1%; 
     }
-    .blue-line {
-        width: 23%;
-        height: 1px;
+    hr {
+        width: 27%;
+        height: 1px;        
         background-color: #036AF5;
-        border-radius: 30px;
+        border: none;
     }
-    p {
+    span {
         color: #036AF5;
         font-size: 25px;
         font-weight: bolder;
+        margin-bottom: 2%;
     }
 }
 .classino-description {
-    @include horizontal-center();
+    display: flex;
+    margin: auto;
+    text-align: center;
+    width: 76%;
     direction: rtl;
-    font-size: 20px;
+    font-size: 17px;  
+    font-weight: 500;  
 }
 .students-picture {
     @include horizontal-center();
     img {
         width: 50%;
         height: auto;
+        margin-top: 3%;
     }
 }
 .why-classino-main {
     position: relative;
     top: 120px;
 }
-.classino-subtitle-1, .classino-subtitle-2 {
+.why-classino-title, .classino-technology-title {
     @include horizontal-center();
+    font-size: 23px;
+    font-weight: 600;
+}
+.why-classino-title {
+    margin-bottom: 2%;
 }
 .why-classino {
     @include horizontal-center();
     .reasons {  
+        @include center();
         font-size: $reasons-font-size; 
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
         width: 20%;
         height: 200px;
         margin: 1.5%;
@@ -81,31 +96,31 @@ body {
         border: 3px solid rgba(54,140,255,0.61);
         box-shadow: 4px 4px 14px 0 rgba(0,0,0,0.09);
         border-radius: 16px;
-        p {
+        span {
+            width: 70%;
             color: $Light;
             text-align: center;
-            padding: 3%;
         }
     }
 }
-.classino-subtitle-2 {
+.classino-technology-title {
     position: relative;
-    left: 5%;
-    top: 23px;
-    margin-top: 9%;
+    top: 200px;
+}
+.student-img {
     img {
-        width: 10%;
+        width: 13%;
         height: auto;
         position: relative;
-        left: 13%;
-        top: 35px;
+        left: 71%;
+        top: 85px;
     }
 }
 .classino-technology {
     margin: auto;
     @include horizontal-center();
     align-items: center;
-    width: 65%;
+    width: 75%;
     height: 300px;
     background-image: linear-gradient(225deg, #C5DEFF 0%, #9BC5FF 19%, #68A9FF 39%, #036AF5 100%);
     border: 4px solid rgba(54,140,255,0.61);
@@ -113,20 +128,19 @@ body {
     border-radius: 16px;
     img {
         width: 180px;
-        height: 180px;
+        height: auto;
         position: relative;
         right: 12%;
     }
-    .text {
+    span {        
         position: relative;
         right: 8%;
-        width: 48%;
-        p {
-            color: $Light;
-            font-size: 20px;
-            direction: rtl;
-        }
-    }   
+        width: 50%;
+        color: $Light;
+        font-size: 17px;
+        direction: rtl;
+        text-align: center;
+    }  
 }
 .tandis-main {
     @include horizontal-center();
@@ -140,14 +154,14 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 44%;
+        width: 54%;
         height: 300px;
         background-image: radial-gradient(circle at 95% 6.1%, #FFD98A 0%, #FFAB00 130%);
         border: 4px solid #FFA800;
         border-radius: 16px;
         span {
             color: $Light;
-            font-size: 23px;
+            font-size: 17px;
             width: 65%;
             direction: rtl;
             text-align: center;
@@ -155,25 +169,22 @@ body {
     }
 }
 .footer {
-    @include horizontal-center();
-    flex-direction: column;
-    align-items: center;
+    @include vertical-center();
     margin-top: 5%;
     span {
         font-size: 27px;
         font-weight: bolder;
     }
     .button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        // position: fixed;
+        @include center();
         width: 20%;
         height: 68px;
         background-image: radial-gradient(circle at 97% 9.9%, #FF8A00 0%, #FFAF0C 122%);
         border-radius: 16px;
-        margin-top: 2%;
+        margin: 2% 0 5% 0;
         a {
-            font-size: 23px;
+            font-size: 21px;
             text-decoration: none;
             text-align: center;
             color: $Light;

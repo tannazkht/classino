@@ -1,3 +1,7 @@
+@font-face {
+  font-family: IranSans;
+  src: url(../assets/Iran-Sans.ttf);
+}
 * {
   box-sizing: border-box;
   font-family: IranSans;
@@ -17,7 +21,6 @@ body {
 
 .classino-title {
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
   margin-top: 3%;
@@ -25,33 +28,40 @@ body {
 .classino-title img {
   width: 15%;
   height: auto;
+  margin-bottom: 1%;
 }
-.classino-title .blue-line {
-  width: 23%;
+.classino-title hr {
+  width: 27%;
   height: 1px;
   background-color: #036AF5;
-  border-radius: 30px;
+  border: none;
 }
-.classino-title p {
+.classino-title span {
   color: #036AF5;
   font-size: 25px;
   font-weight: bolder;
+  margin-bottom: 2%;
 }
 
 .classino-description {
   display: flex;
-  justify-content: center;
+  margin: auto;
+  text-align: center;
+  width: 76%;
   direction: rtl;
-  font-size: 20px;
+  font-size: 17px;
+  font-weight: 500;
 }
 
 .students-picture {
   display: flex;
+  flex-direction: row;
   justify-content: center;
 }
 .students-picture img {
   width: 50%;
   height: auto;
+  margin-top: 3%;
 }
 
 .why-classino-main {
@@ -59,21 +69,28 @@ body {
   top: 120px;
 }
 
-.classino-subtitle-1, .classino-subtitle-2 {
+.why-classino-title, .classino-technology-title {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.why-classino-title {
+  margin-bottom: 2%;
 }
 
 .why-classino {
   display: flex;
+  flex-direction: row;
   justify-content: center;
 }
 .why-classino .reasons {
-  font-size: 20px;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
+  font-size: 17px;
   width: 20%;
   height: 200px;
   margin: 1.5%;
@@ -82,32 +99,32 @@ body {
   box-shadow: 4px 4px 14px 0 rgba(0, 0, 0, 0.09);
   border-radius: 16px;
 }
-.why-classino .reasons p {
+.why-classino .reasons span {
+  width: 70%;
   color: #ffffff;
   text-align: center;
-  padding: 3%;
 }
 
-.classino-subtitle-2 {
+.classino-technology-title {
   position: relative;
-  left: 5%;
-  top: 23px;
-  margin-top: 9%;
+  top: 200px;
 }
-.classino-subtitle-2 img {
-  width: 10%;
+
+.student-img img {
+  width: 13%;
   height: auto;
   position: relative;
-  left: 13%;
-  top: 35px;
+  left: 71%;
+  top: 85px;
 }
 
 .classino-technology {
   margin: auto;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 65%;
+  width: 75%;
   height: 300px;
   background-image: linear-gradient(225deg, #C5DEFF 0%, #9BC5FF 19%, #68A9FF 39%, #036AF5 100%);
   border: 4px solid rgba(54, 140, 255, 0.61);
@@ -116,23 +133,23 @@ body {
 }
 .classino-technology img {
   width: 180px;
-  height: 180px;
+  height: auto;
   position: relative;
   right: 12%;
 }
-.classino-technology .text {
+.classino-technology span {
   position: relative;
   right: 8%;
-  width: 48%;
-}
-.classino-technology .text p {
+  width: 50%;
   color: #ffffff;
-  font-size: 20px;
+  font-size: 17px;
   direction: rtl;
+  text-align: center;
 }
 
 .tandis-main {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   margin: 3% 0 0 1%;
 }
@@ -145,7 +162,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 44%;
+  width: 54%;
   height: 300px;
   background-image: radial-gradient(circle at 95% 6.1%, #FFD98A 0%, #FFAB00 130%);
   border: 4px solid #FFA800;
@@ -153,7 +170,7 @@ body {
 }
 .tandis-main .right span {
   color: #ffffff;
-  font-size: 23px;
+  font-size: 17px;
   width: 65%;
   direction: rtl;
   text-align: center;
@@ -161,7 +178,6 @@ body {
 
 .footer {
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
   margin-top: 5%;
@@ -178,10 +194,10 @@ body {
   height: 68px;
   background-image: radial-gradient(circle at 97% 9.9%, #FF8A00 0%, #FFAF0C 122%);
   border-radius: 16px;
-  margin-top: 2%;
+  margin: 2% 0 5% 0;
 }
 .footer .button a {
-  font-size: 23px;
+  font-size: 21px;
   text-decoration: none;
   text-align: center;
   color: #ffffff;
