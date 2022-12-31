@@ -20,14 +20,16 @@ $Dark: #000000;
     flex-direction: column;
     align-items: center;
 }
+
 * {
     box-sizing: border-box;
     font-family: IranSans;
 }
 body {
-    width: 100%;
-    margin: 0%;
-    padding: 0%;    
+    margin: 0;
+    padding: 0;    
+}
+.first-section {
     background-image: linear-gradient(180deg, #FFE9BD 0%, #FFFFFF 79%);
 }
 .second-section {
@@ -36,7 +38,7 @@ body {
 }
 .classino-title {
     @include vertical-center();
-    margin-top: 3%;
+    padding-top: 3%;
     img {
         width: 15%;
         height: auto;
@@ -85,7 +87,9 @@ body {
     margin-bottom: 2%;
 }
 .why-classino {
-    @include horizontal-center();
+    display: flex;
+    justify-content: center;
+
     .reasons {  
         @include center();
         font-size: $reasons-font-size; 
@@ -144,7 +148,7 @@ body {
 }
 .tandis-main {
     @include horizontal-center();
-    margin: 3% 0 11% 1%;
+    margin: 3% 0 5% 1%;
     img {
         width: 280px;
         position: relative;
@@ -167,27 +171,56 @@ body {
             text-align: center;
         }
     }
+}    
+.button-title {
+    @include vertical-center();
+    font-size: 27px;
+    font-weight: bolder;
+    margin-bottom: 8%;
 }
 .footer {    
-    position: fixed;
-    bottom: 0;
-    left: 40%;
-    @include vertical-center();
-    .button-title {
-        font-size: 27px;
-        font-weight: bolder;
-    }
-    .button {
-        @include center();
-        width: 310px;
-        height: 68px;
-        background-image: radial-gradient(circle at 97% 9.9%, #FF8A00 0%, #FFAF0C 122%);
-        border-radius: 16px;
-        a {
-            font-size: 21px;
-            text-decoration: none;
-            text-align: center;
-            color: $Light;
+    .footer-background {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 100px; 
+        background-color: rgb(151, 151, 151, 0.2);
+        backdrop-filter: blur(8px);
+        border-top: 1px solid rgb(173, 173, 173);
+        @include vertical-center();
+        .button {
+            position: fixed;
+            bottom: 8px;
+            @include center();
+            width: 310px;
+            height: 68px;
+            a {
+                background-image: radial-gradient(circle at 97% 9.9%, #FF8A00 0%, #FFAF0C 122%);
+                border-radius: 16px;
+                font-size: 21px;
+                text-decoration: none;
+                text-align: center;
+                color: $Light;
+                padding: 5% 15%;
+            }
         }
+    }
+}
+@media only screen and (max-width: 720px) {
+    .why-classino-main {
+        top: 10px;
+        .why-classino {
+            flex-direction: column; 
+            align-items: center;   
+            .reasons {
+                width: 80%;
+            }
+        }
+    }
+    .second-section {
+        margin-top: 8%;
+    }
+    .classino-technology-title {
+        top: 60px;
     }
 }

@@ -8,9 +8,11 @@
 }
 
 body {
-  width: 100%;
-  margin: 0%;
-  padding: 0%;
+  margin: 0;
+  padding: 0;
+}
+
+.first-section {
   background-image: linear-gradient(180deg, #FFE9BD 0%, #FFFFFF 79%);
 }
 
@@ -23,7 +25,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 3%;
+  padding-top: 3%;
 }
 .classino-title img {
   width: 15%;
@@ -83,7 +85,6 @@ body {
 
 .why-classino {
   display: flex;
-  flex-direction: row;
   justify-content: center;
 }
 .why-classino .reasons {
@@ -151,7 +152,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 3% 0 11% 1%;
+  margin: 3% 0 5% 1%;
 }
 .tandis-main img {
   width: 280px;
@@ -176,30 +177,62 @@ body {
   text-align: center;
 }
 
-.footer {
+.button-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 27px;
+  font-weight: bolder;
+  margin-bottom: 8%;
+}
+
+.footer .footer-background {
   position: fixed;
   bottom: 0;
-  left: 40%;
+  width: 100%;
+  height: 100px;
+  background-color: rgba(151, 151, 151, 0.2);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  border-top: 1px solid rgb(173, 173, 173);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.footer .button-title {
-  font-size: 27px;
-  font-weight: bolder;
-}
-.footer .button {
+.footer .footer-background .button {
+  position: fixed;
+  bottom: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 310px;
   height: 68px;
+}
+.footer .footer-background .button a {
   background-image: radial-gradient(circle at 97% 9.9%, #FF8A00 0%, #FFAF0C 122%);
   border-radius: 16px;
-}
-.footer .button a {
   font-size: 21px;
   text-decoration: none;
   text-align: center;
   color: #ffffff;
+  padding: 5% 15%;
+}
+
+@media only screen and (max-width: 720px) {
+  .why-classino-main {
+    top: 10px;
+  }
+  .why-classino-main .why-classino {
+    flex-direction: column;
+    align-items: center;
+  }
+  .why-classino-main .why-classino .reasons {
+    width: 80%;
+  }
+  .second-section {
+    margin-top: 8%;
+  }
+  .classino-technology-title {
+    top: 60px;
+  }
 }/*# sourceMappingURL=classino.css.map */
