@@ -149,6 +149,7 @@ body {
 }
 
 .tandis-main {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -218,7 +219,27 @@ body {
   padding: 5% 15%;
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (min-width: 375px) {
+  .classino-technology img {
+    bottom: 20px;
+  }
+  .classino-technology span {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .classino-title img {
+    width: 30%;
+  }
+  .classino-title hr {
+    width: 35%;
+  }
+  .classino-title span {
+    font-size: 20px;
+  }
+  .students-picture img {
+    width: 75%;
+  }
   .why-classino-main {
     top: 10px;
   }
@@ -229,10 +250,53 @@ body {
   .why-classino-main .why-classino .reasons {
     width: 80%;
   }
+  .why-classino-main .why-classino .reasons span {
+    font-size: 21px;
+  }
   .second-section {
     margin-top: 8%;
   }
   .classino-technology-title {
-    top: 60px;
+    top: 25px;
+  }
+  .classino-technology {
+    flex-direction: column;
+    background-image: radial-gradient(circle at 95% 6.1%, #FFD98A 0%, #FFAB00 130%);
+    border: 4px solid #FFA800;
+    margin-top: 18%;
+  }
+  .classino-technology img {
+    right: 0;
+    position: relative;
+    bottom: 80px;
+  }
+  .classino-technology span {
+    right: 0;
+    bottom: 85px;
+    width: 75%;
+    font-size: 21px;
+  }
+  .tandis-main {
+    top: 90px;
+  }
+  .tandis-main img {
+    position: absolute;
+    bottom: 70%;
+    right: 37%;
+    width: 180px;
+  }
+  .tandis-main .tandis-description {
+    width: 75%;
+  }
+  .tandis-main .tandis-description span {
+    font-size: 21px;
+  }
+  .student-img img {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .button-title {
+    margin-bottom: 20%;
   }
 }/*# sourceMappingURL=classino.css.map */
